@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 // Define the MongoDB connection URL
 // For Local server -->>>
-// const mongoURL =  'mongodb://localhost:27017/hotels'
-
+//  const mongoURL =  process.env.MONGODB_URL_LOCAL;
 // for Online database(Mongodb Athlas)-->>>
-const mongoURL = 'mongodb+srv://Tanay:233620Tanay@cluster0.wblk8.mongodb.net'
-
+const mongoURL = process.env.MONGODB_URL;
+// for security of password we useed env and share the actual file link in env file 
+require('dotenv').config();
 // Set up MongoDB connection
 
 mongoose.connect(mongoURL, {

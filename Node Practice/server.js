@@ -7,7 +7,7 @@ const db = require('./db');
 //Body parser retreive data from http client request and convert it into suitable form and store in req.body(and it can read any type of data which client gives)
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-
+const PORT = process.env.PORT || 3000;
 app.get('/', function (req, res) {
   res.send('Welcome Habibi')
 })
@@ -92,8 +92,11 @@ app.use('/person',personRoutes);
   // for Menu ---  >>>
   //Import the route files
 const menuItemRoutes = require('./routes/menuItemRoutes');
-app.use('/menu',menuItemRoutes);
+app.u
+se('/menu',menuItemRoutes);
 
-app.listen(3000,()=>{
+// If any other port availble then that used otherwise 3000 local used -->>>
+
+app.listen(PORT,()=>{
     console.log('Listening on port 3000');
 })
