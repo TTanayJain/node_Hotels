@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 // Define the MongoDB connection URL
-const mongoURL =  'mongodb://localhost:27017/hotels'
+// For Local server -->>>
+// const mongoURL =  'mongodb://localhost:27017/hotels'
+
+// for Online database(Mongodb Athlas)-->>>
+const mongoURL = 'mongodb+srv://Tanay:233620Tanay@cluster0.wblk8.mongodb.net'
 
 // Set up MongoDB connection
 
